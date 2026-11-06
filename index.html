@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سياسة الخصوصية | Privacy Policy - Finance Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1976D2;
+            --primary-dark: #0D47A1;
+            --primary-light: #E3F2FD;
+            --accent: #2E7D32;
+            --accent-light: #E8F5E9;
+            --text-main: #1E293B;
+            --text-secondary: #64748B;
+            --bg-page: #F8FAFC;
+            --bg-card: #FFFFFF;
+            --border: #E2E8F0;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -2px rgba(0,0,0,0.05);
+            --radius-md: 12px;
+            --radius-lg: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Cairo', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 24px 16px;
+        }
+
+        /* LTR adjustments when switched to English */
+        html[dir="ltr"] body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Top Bar */
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .brand-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: var(--primary-dark);
+        }
+
+        .brand-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .lang-switcher {
+            display: inline-flex;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 4px;
+            border-radius: 30px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .lang-btn {
+            border: none;
+            background: transparent;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            cursor: pointer;
+            color: var(--text-secondary);
+            transition: all 0.2s ease;
+            font-family: inherit;
+        }
+
+        .lang-btn.active {
+            background-color: var(--primary);
+            color: white;
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* Hero Header */
+        .hero-header {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 32px 28px;
+            margin-bottom: 24px;
+            box-shadow: var(--shadow-md);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+        }
+
+        .hero-title {
+            font-size: 1.85rem;
+            font-weight: 800;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+        }
+
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 18px;
+        }
+
+        .meta-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px dashed var(--border);
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--primary-light);
+            padding: 10px 14px;
+            border-radius: var(--radius-md);
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        /* Content Cards */
+        .policy-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .policy-card h2 {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.25rem;
+            color: var(--primary-dark);
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-light);
+        }
+
+        .policy-card h3 {
+            font-size: 1.05rem;
+            color: var(--text-main);
+            margin: 18px 0 8px 0;
+        }
+
+        .policy-card p {
+            margin-bottom: 12px;
+            color: #334155;
+            font-size: 0.96rem;
+        }
+
+        .policy-card ul {
+            padding-inline-start: 24px;
+            margin-bottom: 14px;
+        }
+
+        .policy-card li {
+            margin-bottom: 8px;
+            color: #334155;
+            font-size: 0.95rem;
+        }
+
+        .policy-card li strong {
+            color: var(--text-main);
+        }
+
+        .badge-pill {
+            display: inline-block;
+            background: #EFF6FF;
+            color: #1D4ED8;
+            font-size: 0.78rem;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 6px;
+            margin-inline-end: 6px;
+            direction: ltr;
+        }
+
+        .note-box {
+            background-color: var(--accent-light);
+            border-right: 4px solid var(--accent);
+            padding: 14px 18px;
+            border-radius: 8px;
+            margin: 14px 0;
+            font-size: 0.92rem;
+            color: #1B5E20;
+        }
+
+        html[dir="ltr"] .note-box {
+            border-right: none;
+            border-left: 4px solid var(--accent);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 24px 12px;
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+        }
+
+        .footer a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Language visibility */
+        .content-en {
+            display: none;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 16px 10px;
+            }
+            .hero-header {
+                padding: 20px 16px;
+            }
+            .policy-card {
+                padding: 20px 16px;
+            }
+            .hero-title {
+                font-size: 1.45rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Top Navigation -->
+    <div class="top-nav">
+        <div class="brand-badge">
+            <div class="brand-icon">💼</div>
+            <span>Finance Tracker</span>
+        </div>
+        <div class="lang-switcher">
+            <button class="lang-btn active" id="btnAr" onclick="setLanguage('ar')">العربية</button>
+            <button class="lang-btn" id="btnEn" onclick="setLanguage('en')">English</button>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- ARABIC CONTENT -->
+    <!-- ========================================== -->
+    <div id="contentAr" class="content-ar">
+        <div class="hero-header">
+            <h1 class="hero-title">سياسة الخصوصية</h1>
+            <div class="hero-meta">
+                <span class="meta-tag"><strong>التطبيق:</strong> فينانس تراك (Finance Tracker)</span>
+                <span class="meta-tag"><strong>المطور:</strong> م. إسحاق رماح</span>
+                <span class="meta-tag"><strong>تاريخ السريان:</strong> 7 نوفمبر 2026</span>
+            </div>
+            <p>
+                نحن في تطبيق <strong>Finance Tracker</strong> نضع خصوصيتك وأمان بياناتك المالية في قمة أولوياتنا. تم تصميم التطبيق وفق مبدأ <strong>«الخصوصية أولاً» (Privacy-by-Design)</strong> لضمان بقاء سجلاتك المالية ملكاً خاصاً لك وحدك دون أي تتبع أو إعلانات مزعجة.
+            </p>
+            <div class="highlights">
+                <div class="highlight-item">🔒 تخزين محلي مشفر 100%</div>
+                <div class="highlight-item">🚫 لا يتم بيع أو مشاركة بياناتك</div>
+                <div class="highlight-item">☁️ نسخ احتياطي آمن برضاك الكامل</div>
+            </div>
+        </div>
+
+        <div class="policy-card">
+            <h2>📊 1. البيانات التي يتعامل معها التطبيق</h2>
+            <h3>أ. البيانات المالية والمحاسبية</h3>
+            <p>
+                كافة البيانات المالية المسجلة (مثل: أسماء الحسابات، الأرصدة، العمليات، الديون، المستحقات، أقساط السداد، وعقود التحصيل) يتم حفظها ومعالجتها <strong>محلياً على ذاكرة هاتفك فقط</strong> عبر قاعدة بيانات محلية مشفرة (Hive). لا يتم رفع أو تجميع أي من هذه الأرقام أو الحسابات على أي خوادم خارجية خاصة بنا إطلاقاً.
+            </p>
+            <h3>ب. بيانات تسجيل الدخول</h3>
+            <p>
+                عند اختيارك تسجيل الدخول عبر Google Sign-In أو Firebase Authentication، نستخدم فقط المعرف الأساسي لحسابك وبريدك الإلكتروني لتمكين خدمات المصادقة والنسخ الاحتياطي السحابي الخاص بك.
+            </p>
+        </div>
+
+        <div class="policy-card">
+            <h2>🔑 2. الأذونات المطلوبة والغرض منها</h2>
+            <p>يطلب التطبيق أذونات محددة بدقة لتشغيل الميزات الأساسية ولا يتم استغلالها لأي أغراض أخرى:</p>
+            <ul>
+                <li>
+                    <span class="badge-pill">CAMERA</span>
+                    <strong>الكاميرا:</strong> تُستخدم لغرض وحيد وهو مسح رمز الاستجابة السريعة (QR Code) لربط ومزامنة التطبيق مع أجهزتك الأخرى محلياً. التطبيق لا يلتقط صوراً ولا يسجل فيديوهات ولا يحتفظ بأي وسائط.
+                </li>
+                <li>
+                    <span class="badge-pill">INTERNET</span>
+                    <strong>الاتصال بالإنترنت وحالة الشبكة:</strong> للتحقق من الاتصال أثناء تسجيل الدخول أو إتمام عملية النسخ الاحتياطي السحابي عبر Google Drive.
+                </li>
+                <li>
+                    <span class="badge-pill">ACCESS_WIFI_STATE</span>
+                    <strong>الشبكة المحلية والـ Wi-Fi:</strong> لتشغيل ميزة «الربط مع الأجهزة الأخرى»؛ لاكتشاف الأجهزة على نفس شبكة الـ Wi-Fi ونقل البيانات بين أجهزتك بطريقة مباشرة وندية (P2P) دون وسيط خارجي.
+                </li>
+                <li>
+                    <span class="badge-pill">POST_NOTIFICATIONS & ALARMS</span>
+                    <strong>التنبيهات والمنبه الدقيق:</strong> لجدولة إشعارات محلية لتذكيرك بمواعيد استحقاق الأقساط، الديون، ومواعيد عقود الإيرادات قبل موعدها.
+                </li>
+                <li>
+                    <span class="badge-pill">USE_BIOMETRIC</span>
+                    <strong>البصمة والمصادقة الحيوية:</strong> لتأمين فتح التطبيق عبر نظام الحماية المدمج في نظام Android. لا يمتلك التطبيق حق الوصول المباشر لبيانات بصمتك الحيوية.
+                </li>
+            </ul>
+        </div>
+
+        <div class="policy-card">
+            <h2>💾 3. النسخ الاحتياطي والمزامنة</h2>
+            <ul>
+                <li><strong>النسخ الاحتياطي المحلي:</strong> يمكنك تصدير قاعدة بياناتك في ملف مشفر ومضغوط (بامتداد <code>.db</code>) وحفظه في أي مكان تحدده على هاتفك أو مشاركته بنفسك.</li>
+                <li><strong>النسخ السحابي (Google Drive):</strong> عند تفعيلك للنسخ الاحتياطي السحابي، يتم رفع النسخة المشفرة إلى مجلد التطبيق المخصص في مساحتك الشخصية على Google Drive. لا يمتلك مطور التطبيق أو أي طرف ثالث حق الوصول إلى هذا المجلد.</li>
+                <li><strong>المزامنة المحلية بين الأجهزة:</strong> تتم المزامنة عبر الاتصال المشفر بين الأجهزة على نفس الشبكة المحلية فقط دون المرور بأي سيرفرات وسيطة.</li>
+            </ul>
+            <div class="note-box">
+                💡 <strong>أمان بياناتك:</strong> أنت الوحيد الذي يملك السيطرة الكاملة على نقل أو استعادة أو حذف النسخ الاحتياطية الخاصة بك.
+            </div>
+        </div>
+
+        <div class="policy-card">
+            <h2>🤝 4. خدمات الطرف الثالث (Third-Party Services)</h2>
+            <p>يعتمد التطبيق على الخدمات الرسمية والمعتمدة المقدمة من Google فقط لتوفير البنية التحتية الآمنة:</p>
+            <ul>
+                <li><strong>Google Play Services:</strong> لإدارة التحديثات وميزات النظام الأساسية.</li>
+                <li><strong>Firebase Authentication & Cloud Services:</strong> لإدارة تسجيل الدخول الآمن.</li>
+                <li><strong>Google Drive API:</strong> لتمكين النسخ الاحتياطي السحابي على مساحتك الشخصية.</li>
+            </ul>
+            <p><strong>تعهد قاطع:</strong> نحن لا نبيع، ولا نؤجر، ولا نتاجر، ولا نشارك أي معلومات شخصية أو مالية مع شركات الإعلانات أو أي جهات خارجية.</p>
+        </div>
+
+        <div class="policy-card">
+            <h2>🗑️ 5. حقوق المستخدم وحذف البيانات</h2>
+            <p>
+                لديك الحق الكامل في التحكم ببياناتك في أي لحظة:
+            </p>
+            <ul>
+                <li>يمكنك حذف كافة البيانات المحلية بمسح بيانات التطبيق من إعدادات الهاتف أو إلغاء تثبيت التطبيق.</li>
+                <li>يمكنك حذف النسخ الاحتياطية السحابية المخزنة على Google Drive مباشرة من خلال التطبيق أو من حسابك على Google.</li>
+            </ul>
+        </div>
+
+        <div class="policy-card">
+            <h2>👶 6. خصوصية الأطفال</h2>
+            <p>
+                هذا التطبيق موجه للأشخاص البالغين لإدارة التزاماتهم المالية، ولا يجمع عن قصد أي معلومات تعريفية شخصية من الأطفال دون سن 13 عاماً.
+            </p>
+        </div>
+
+        <div class="policy-card">
+            <h2>📬 7. معلومات التواصل والمطور</h2>
+            <p>إذا كانت لديك أي استفسارات أو اقتراحات بشأن سياسة الخصوصية هذه، يُسعدنا تواصلك معنا:</p>
+            <ul>
+                <li><strong>المطور:</strong> م. إسحاق رماح (Eng. Izak Rammah)</li>
+                <li><strong>صفحة المطور على المتجر:</strong> <a href="https://play.google.com/store/apps/developer?id=Eng.IzakRammah&hl=ar" target="_blank" rel="noopener">Google Play Store Developer Page</a></li>
+                <li><strong>معرف الحزمة (App ID):</strong> <code>com.izakrammah.financetracker</code></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- ENGLISH CONTENT -->
+    <!-- ========================================== -->
+    <div id="contentEn" class="content-en">
+        <div class="hero-header">
+            <h1 class="hero-title">Privacy Policy</h1>
+            <div class="hero-meta">
+                <span class="meta-tag"><strong>Application:</strong> Finance Tracker</span>
+                <span class="meta-tag"><strong>Developer:</strong> Eng. Izak Rammah</span>
+                <span class="meta-tag"><strong>Effective Date:</strong> November 7, 2026</span>
+            </div>
+            <p>
+                At <strong>Finance Tracker</strong>, your privacy and financial security are our utmost priorities. The application is built following a <strong>Privacy-by-Design</strong> approach, ensuring that your financial records remain strictly confidential and under your sole control.
+            </p>
+            <div class="highlights">
+                <div class="highlight-item">🔒 100% Encrypted Local Storage</div>
+                <div class="highlight-item">🚫 Zero Third-Party Advertising</div>
+                <div class="highlight-item">☁️ Secure & Consent-Based Backups</div>
+            </div>
+        </div>
+
+        <div class="policy-card">
+            <h2>📊 1. Data Collection & Processing</h2>
+            <h3>A. Financial and Accounting Records</h3>
+            <p>
+                All entered financial information (including account titles, balances, transactions, debts, payables, installment schedules, and collection contracts) is processed and stored <strong>locally on your device</strong> using an encrypted local database (Hive). We do not collect, monitor, or upload your financial records to any external servers.
+            </p>
+            <h3>B. Authentication Credentials</h3>
+            <p>
+                When you choose to sign in via Google Sign-In or Firebase Authentication, we only receive your basic identifier and email address to authenticate your identity and facilitate cloud backup features.
+            </p>
+        </div>
+
+        <div class="policy-card">
+            <h2>🔑 2. Device Permissions and Why We Need Them</h2>
+            <p>Finance Tracker requests only the permissions essential to deliver its features safely:</p>
+            <ul>
+                <li>
+                    <span class="badge-pill">CAMERA</span>
+                    <strong>Camera:</strong> Used exclusively to scan QR codes for quick local device linking and peer-to-peer data sync. The app never captures, records, or stores photos or video feeds.
+                </li>
+                <li>
+                    <span class="badge-pill">INTERNET</span>
+                    <strong>Internet & Network State:</strong> Used to check connectivity during authentication and when performing cloud backups to Google Drive.
+                </li>
+                <li>
+                    <span class="badge-pill">ACCESS_WIFI_STATE</span>
+                    <strong>Local Network & Wi-Fi:</strong> Enables the "Link with Other Devices" feature to discover and synchronize data directly between devices on the same Wi-Fi network (P2P) without intermediate cloud servers.
+                </li>
+                <li>
+                    <span class="badge-pill">POST_NOTIFICATIONS & ALARMS</span>
+                    <strong>Notifications & Exact Alarms:</strong> Used to schedule localized reminders alerting you to upcoming installments, debts, and contract due dates.
+                </li>
+                <li>
+                    <span class="badge-pill">USE_BIOMETRIC</span>
+                    <strong>Biometrics & Fingerprint:</strong> Secures the app with your phone's biometric hardware. Biometric checks are handled by Android OS; the app has zero access to raw biometric data.
+                </li>
+            </ul>
+        </div>
+
+        <div class="policy-card">
+            <h2>💾 3. Data Backup and Synchronization</h2>
+            <ul>
+                <li><strong>Local Backup:</strong> You can export a compressed, encrypted backup file (<code>.db</code>) to your device storage or share it securely.</li>
+                <li><strong>Google Drive Cloud Backup:</strong> If enabled, backup archives are stored directly in your personal Google Drive app data storage. Neither the developer nor any external entity can access these archives.</li>
+                <li><strong>Local Network Synchronization:</strong> Transmits encrypted data directly between your linked devices over your local Wi-Fi without uploading to any central server.</li>
+            </ul>
+            <div class="note-box">
+                💡 <strong>Your Data, Your Control:</strong> You maintain total control over your database backups, restoration, and deletion.
+            </div>
+        </div>
+
+        <div class="policy-card">
+            <h2>🤝 4. Third-Party Services</h2>
+            <p>Finance Tracker uses reputable Google infrastructure services strictly for application functionality:</p>
+            <ul>
+                <li><strong>Google Play Services:</strong> Core platform support and updates.</li>
+                <li><strong>Firebase Authentication & Cloud Services:</strong> Secure identity management.</li>
+                <li><strong>Google Drive API:</strong> Personal cloud backup storage.</li>
+            </ul>
+            <p><strong>Strict Guarantee:</strong> We do not sell, rent, trade, or share your financial or personal information with advertisers or any marketing third parties.</p>
+        </div>
+
+        <div class="policy-card">
+            <h2>🗑️ 5. User Rights & Data Deletion</h2>
+            <p>You have full ownership of your data at all times:</p>
+            <ul>
+                <li>You can completely wipe all local data by clearing the app data in Android settings or uninstalling the app.</li>
+                <li>You can delete your cloud backups at any time directly through the app interface or from your personal Google Drive storage.</li>
+            </ul>
+        </div>
+
+        <div class="policy-card">
+            <h2>👶 6. Children's Privacy</h2>
+            <p>
+                Finance Tracker is intended for adults managing personal and business finances. We do not knowingly collect personal identifiable information from children under 13 years of age.
+            </p>
+        </div>
+
+        <div class="policy-card">
+            <h2>📬 7. Contact Information</h2>
+            <p>If you have any questions or suggestions regarding this Privacy Policy, please contact us:</p>
+            <ul>
+                <li><strong>Developer:</strong> Eng. Izak Rammah</li>
+                <li><strong>Google Play Developer Page:</strong> <a href="https://play.google.com/store/apps/developer?id=Eng.IzakRammah&hl=ar" target="_blank" rel="noopener">Eng. Izak Rammah on Google Play</a></li>
+                <li><strong>Package Identifier:</strong> <code>com.izakrammah.financetracker</code></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2026 Finance Tracker • Developed by <a href="https://play.google.com/store/apps/developer?id=Eng.IzakRammah&hl=ar" target="_blank" rel="noopener">Eng. Izak Rammah</a>. All rights reserved.</p>
+    </div>
+</div>
+
+<script>
+    function setLanguage(lang) {
+        const html = document.documentElement;
+        const btnAr = document.getElementById('btnAr');
+        const btnEn = document.getElementById('btnEn');
+        const contentAr = document.getElementById('contentAr');
+        const contentEn = document.getElementById('contentEn');
+
+        if (lang === 'ar') {
+            html.setAttribute('lang', 'ar');
+            html.setAttribute('dir', 'rtl');
+            btnAr.classList.add('active');
+            btnEn.classList.remove('active');
+            contentAr.style.display = 'block';
+            contentEn.style.display = 'none';
+        } else {
+            html.setAttribute('lang', 'en');
+            html.setAttribute('dir', 'ltr');
+            btnEn.classList.add('active');
+            btnAr.classList.remove('active');
+            contentAr.style.display = 'none';
+            contentEn.style.display = 'block';
+        }
+    }
+</script>
+
+</body>
+</html>
+
